@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CIT | Coimbatore Institute of Technology</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+
+        /* =========================================
+           TOP BAR
+        ========================================= */
+
+        .topbar {
+            background: #071d3b;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 9px 7%;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 14px 7%;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .logo-circle {
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #e7a91b;
+
+            color: #071d3b;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        .logo-text h2 {
+            color: #071d3b;
+            font-size: 22px;
+        }
+
+
+        .logo-text p {
+            color: #777;
+            font-size: 12px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+
+        .nav-links a {
+            color: #172033;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #e7a91b;
+        }
+
+
+        .apply-btn {
+            background: #e7a91b;
+
+            color: #071d3b !important;
+
+            padding: 10px 18px;
+
+            border-radius: 5px;
+        }
+
+
+        .menu-btn {
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            font-size: 28px;
+
+            cursor: pointer;
+
+            color: #071d3b;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 680px;
+
+            background:
+                linear-gradient(
+                    rgba(4, 22, 45, 0.78),
+                    rgba(4, 22, 45, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 80px 7%;
+
+            color: white;
+        }
+
+
+        .hero-content {
+            max-width: 780px;
+
+            animation: heroText 1s ease;
+        }
+
+
+        @keyframes heroText {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .hero-label {
+            color: #e7a91b;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 {
+
+            font-size: 58px;
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 span {
+            color: #e7a91b;
+        }
+
+
+        .hero-description {
+
+            max-width: 650px;
+
+            font-size: 18px;
+
+            color: #eeeeee;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 15px;
+        }
+
+
+        .primary-btn {
+
+            display: inline-block;
+
+            background: #e7a91b;
+
+            color: #071d3b;
+
+            padding: 14px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        .secondary-btn {
+
+            display: inline-block;
+
+            border: 2px solid white;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .secondary-btn:hover {
+
+            background: white;
+
+            color: #071d3b;
+        }
+
+
+        /* =========================================
+           NOTICE
+        ========================================= */
+
+        .notice {
+
+            background: #e7a91b;
+
+            color: #071d3b;
+
+            padding: 13px 7%;
+
+            display: flex;
+
+            gap: 15px;
+
+            align-items: center;
+
+            font-size: 14px;
+        }
+
+
+        .notice strong {
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           GENERAL SECTION
+        ========================================= */
+
+        .section {
+
+            padding: 90px 7%;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+
+        .section-heading .small-title {
+
+            color: #e7a91b;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .section-heading h2 {
+
+            color: #071d3b;
+
+            font-size: 38px;
+        }
+
+
+        .section-heading p {
+
+            color: #666;
+
+            max-width: 650px;
+
+            margin: 12px auto 0;
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .about-image {
+
+            position: relative;
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+
+        .experience {
+
+            position: absolute;
+
+            bottom: -20px;
+
+            right: 25px;
+
+            background: #071d3b;
+
+            color: white;
+
+            padding: 20px 25px;
+
+            border-radius: 8px;
+
+            text-align: center;
+        }
+
+
+        .experience strong {
+
+            display: block;
+
+            color: #e7a91b;
+
+            font-size: 30px;
+        }
+
+
+        .about-content h3 {
+
+            color: #071d3b;
+
+            font-size: 32px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .about-content p {
+
+            color: #666;
+
+            margin-bottom: 15px;
+        }
+
+
+        .check-list {
+
+            margin: 25px 0;
+        }
+
+
+        .check-list li {
+
+            margin-bottom: 10px;
+
+            color: #333;
+        }
+
+
+        .check-list li::before {
+
+            content: "✓";
+
+            color: #e7a91b;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats {
+
+            background: #071d3b;
+
+            padding: 55px 7%;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .stat h2 {
+
+            color: #e7a91b;
+
+            font-size: 42px;
+        }
+
+
+        .stat p {
+
+            color: #ddd;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           DEPARTMENTS
+        ========================================= */
+
+        .departments {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .department {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            border: 1px solid #e8e8e8;
+
+            transition: 0.3s;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+
+        .department:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #e7a91b;
+
+            box-shadow: 0 12px 25px rgba(0,0,0,0.10);
+        }
+
+
+        .department-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            background: #fff3d5;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .department h3 {
+
+            color: #071d3b;
+
+            margin-bottom: 10px;
+
+            font-size: 20px;
+        }
+
+
+        .department p {
+
+            color: #666;
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .department button {
+
+            background: none;
+
+            border: none;
+
+            color: #071d3b;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            padding: 0;
+        }
+
+
+        /* =========================================
+           PROGRAMMES
+        ========================================= */
+
+        .programme-section {
+
+            background: #eef2f7;
+        }
+
+
+        .programmes {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .programme {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+
+        .programme::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 5px;
+
+            height: 100%;
+
+            background: #e7a91b;
+        }
+
+
+        .programme h3 {
+
+            color: #071d3b;
+
+            margin-bottom: 12px;
+        }
+
+
+        .programme p {
+
+            color: #666;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .programme a {
+
+            color: #071d3b;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           FACILITIES
+        ========================================= */
+
+        .facilities {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .facility {
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: white;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+
+        .facility:hover {
+
+            transform: translateY(-6px);
+        }
+
+
+        .facility-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .facility h3 {
+
+            color: #071d3b;
+
+            margin-bottom: 8px;
+        }
+
+
+        .facility p {
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           ADMISSION
+        ========================================= */
+
+        .admission-section {
+
+            background: #071d3b;
+
+            color: white;
+        }
+
+
+        .admission-section .section-heading h2 {
+
+            color: white;
+        }
+
+
+        .admission-section .section-heading p {
+
+            color: #ccc;
+        }
+
+
+        .admission-box {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 12px;
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            color: #333;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+        }
+
+
+        .form-group input,
+        .form-group select {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            outline: none;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus {
+
+            border-color: #e7a91b;
+        }
+
+
+        .submit-btn {
+
+            width: 100%;
+
+            border: none;
+
+            background: #e7a91b;
+
+            color: #071d3b;
+
+            padding: 14px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .contact-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+
+        .contact-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .contact-card h3 {
+
+            color: #071d3b;
+
+            margin-bottom: 8px;
+        }
+
+
+        .contact-card p {
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background: #041226;
+
+            color: white;
+
+            padding: 45px 7%;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+
+            font-size: 34px;
+
+            font-weight: bold;
+
+            color: #e7a91b;
+
+            margin-bottom: 10px;
+        }
+
+
+        footer p {
+
+            color: #aaa;
+
+            font-size: 14px;
+
+            margin: 5px;
+        }
+
+
+        /* =========================================
+           BACK TO TOP
+        ========================================= */
+
+        #topBtn {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #e7a91b;
+
+            color: #071d3b;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 999;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+
+                gap: 15px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .departments {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .programmes {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .facilities {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .topbar {
+
+                display: none;
+            }
+
+
+            .menu-btn {
+
+                display: block;
+            }
+
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 86px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 25px 7%;
+
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            }
+
+
+            .nav-links.active {
+
+                display: flex;
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                padding: 12px 5%;
+            }
+
+
+            .hero {
+
+                min-height: 580px;
+
+                padding: 60px 5%;
+            }
+
+
+            .hero h1 {
+
+                font-size: 34px;
+            }
+
+
+            .hero-description {
+
+                font-size: 16px;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .section {
+
+                padding: 65px 5%;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 30px;
+            }
+
+
+            .departments {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .programmes {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .facilities {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .admission-box {
+
+                padding: 25px 20px;
+            }
+
+
+            .notice {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 3px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         TOP BAR
+    ========================================= -->
+
+    <div class="topbar">
+
+        <span>
+            Coimbatore Institute of Technology
+        </span>
+
+        <span>
+            📞 +91 422 2574071
+            &nbsp; | &nbsp;
+            ✉ info@cit.edu.in
+        </span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                CIT
+            </div>
+
+            <div class="logo-text">
+
+                <h2>CIT</h2>
+
+                <p>
+                    Coimbatore Institute of Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#departments">
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <a href="#programmes">
+                    Programmes
+                </a>
+            </li>
+
+            <li>
+                <a href="#facilities">
+                    Facilities
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="#admission"
+                    class="apply-btn">
+
+                    Apply Now
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section
+        class="hero"
+        id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                WELCOME TO CIT
+            </div>
+
+            <h1>
+
+                COIMBATORE
+                <span>INSTITUTE</span>
+                OF TECHNOLOGY
+
+            </h1>
+
+            <p class="hero-description">
+
+                Empowering students through quality
+                education, innovation, research and
+                technological excellence.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#about"
+                    class="primary-btn">
+
+                    Explore CIT
+
+                </a>
+
+
+                <a
+                    href="#admission"
+                    class="secondary-btn">
+
+                    Admission Enquiry
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         NOTICE
+    ========================================= -->
+
+    <div class="notice">
+
+        <strong>
+            📢 Latest News
+        </strong>
+
+        <span>
+            Admissions and academic programmes are
+            available. Contact the institution for
+            current details.
+        </span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================= -->
+
+    <section
+        class="section"
+        id="about">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                ABOUT CIT
+            </div>
+
+            <h2>
+                Excellence in Engineering Education
+            </h2>
+
+            <p>
+                A modern learning environment designed
+                to encourage knowledge, innovation and
+                professional growth.
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=85"
+                    alt="College Campus">
+
+
+                <div class="experience">
+
+                    <strong>
+                        60+
+                    </strong>
+
+                    Years of Excellence
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h3>
+                    Building Tomorrow's Engineers
+                </h3>
+
+                <p>
+                    CIT is presented here as a student
+                    project website focused on engineering
+                    education, technology, research and
+                    innovation.
+                </p>
+
+                <p>
+                    The website provides an organized
+                    overview of academic departments,
+                    programmes, facilities and admission
+                    enquiries.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        Quality technical education
+                    </li>
+
+                    <li>
+                        Innovation and research
+                    </li>
+
+                    <li>
+                        Industry-oriented learning
+                    </li>
+
+                    <li>
+                        Student development
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="#departments"
+                    class="primary-btn">
+
+                    Explore Departments
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         STATS
+    ========================================= -->
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <h2>
+                60+
+            </h2>
+
+            <p>
+                Years of Excellence
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h2>
+                15+
+            </h2>
+
+            <p>
+                Academic Departments
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h2>
+                5000+
+            </h2>
+
+            <p>
+                Students
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h2>
+                200+
+            </h2>
+
+            <p>
+                Faculty Members
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DEPARTMENTS
+    ========================================= -->
+
+    <section
+        class="section"
+        id="departments">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                ACADEMICS
+            </div>
+
+            <h2>
+                Our Departments
+            </h2>
+
+            <p>
+                Explore different engineering and
+                technology disciplines.
+            </p>
+
+        </div>
+
+
+        <div class="departments">
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computer Science Engineering
+                </h3>
+
+                <p>
+                    Software development, computing,
+                    artificial intelligence and
+                    emerging technologies.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Computer Science Engineering')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    📡
+                </div>
+
+                <h3>
+                    Electronics & Communication
+                </h3>
+
+                <p>
+                    Communication systems, electronics,
+                    embedded systems and digital
+                    technologies.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Electronics and Communication Engineering')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Power systems, electrical machines,
+                    control systems and renewable energy.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Electrical Engineering')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Mechanical Engineering
+                </h3>
+
+                <p>
+                    Product design, manufacturing,
+                    automation and mechanical systems.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Mechanical Engineering')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    Civil Engineering
+                </h3>
+
+                <p>
+                    Structures, construction,
+                    infrastructure and environmental
+                    engineering.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Civil Engineering')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+
+            <div class="department">
+
+                <div class="department-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI & Data Science
+                </h3>
+
+                <p>
+                    Artificial intelligence,
+                    machine learning, data analytics
+                    and intelligent systems.
+                </p>
+
+                <button
+                    onclick="departmentInfo('Artificial Intelligence and Data Science')">
+
+                    Learn More →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROGRAMMES
+    ========================================= -->
+
+    <section
+        class="section programme-section"
+        id="programmes">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                PROGRAMMES
+            </div>
+
+            <h2>
+                Academic Programmes
+            </h2>
+
+            <p>
+                Academic pathways for undergraduate,
+                postgraduate and research students.
+            </p>
+
+        </div>
+
+
+        <div class="programmes">
+
+
+            <div class="programme">
+
+                <h3>
+                    Undergraduate
+                </h3>
+
+                <p>
+                    Engineering and technology
+                    programmes designed to build
+                    strong technical foundations.
+                </p>
+
+                <a href="#admission">
+                    Admission Enquiry →
+                </a>
+
+            </div>
+
+
+            <div class="programme">
+
+                <h3>
+                    Postgraduate
+                </h3>
+
+                <p>
+                    Advanced programmes for students
+                    interested in specialized technical
+                    knowledge.
+                </p>
+
+                <a href="#admission">
+                    Admission Enquiry →
+                </a>
+
+            </div>
+
+
+            <div class="programme">
+
+                <h3>
+                    Research
+                </h3>
+
+                <p>
+                    Research and doctoral opportunities
+                    for advanced academic exploration.
+                </p>
+
+                <a href="#admission">
+                    Research Enquiry →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FACILITIES
+    ========================================= -->
+
+    <section
+        class="section"
+        id="facilities">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                CAMPUS
+            </div>
+
+            <h2>
+                Campus Facilities
+            </h2>
+
+            <p>
+                Supporting students with learning,
+                research and extracurricular facilities.
+            </p>
+
+        </div>
+
+
+        <div class="facilities">
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Central Library
+                </h3>
+
+                <p>
+                    Books, digital resources and
+                    learning materials.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Research Labs
+                </h3>
+
+                <p>
+                    Laboratory facilities for
+                    academic and research activities.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    🏃
+                </div>
+
+                <h3>
+                    Sports
+                </h3>
+
+                <p>
+                    Facilities supporting sports
+                    and student activities.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Innovation Centre
+                </h3>
+
+                <p>
+                    A space for innovation,
+                    projects and new ideas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ADMISSION
+    ========================================= -->
+
+    <section
+        class="section admission-section"
+        id="admission">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                ADMISSIONS
+            </div>
+
+            <h2>
+                Admission Enquiry
+            </h2>
+
+            <p>
+                Submit your details for an admission
+                enquiry.
+            </p>
+
+        </div>
+
+
+        <div class="admission-box">
+
+            <form id="admissionForm">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter your name">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            placeholder="Enter your email">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Programme
+                        </label>
+
+                        <select id="programme">
+
+                            <option value="">
+                                Select Programme
+                            </option>
+
+                            <option>
+                                Undergraduate
+                            </option>
+
+                            <option>
+                                Postgraduate
+                            </option>
+
+                            <option>
+                                Research
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Submit Admission Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <section
+        class="section"
+        id="contact">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                CONTACT
+            </div>
+
+            <h2>
+                Get In Touch
+            </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p>
+                    Coimbatore Institute of Technology,
+                    Coimbatore, Tamil Nadu, India.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +91 422 2574071
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    info@cit.edu.in
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            CIT
+        </div>
+
+        <p>
+            Coimbatore Institute of Technology
+        </p>
+
+        <p>
+            Student Project Website
+        </p>
+
+        <p>
+            © 2026 CIT Website
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         BACK TO TOP
+    ========================================= -->
+
+    <button
+        id="topBtn"
+        onclick="goTop()">
+
+        ↑
+
+    </button>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =====================================
+           MOBILE MENU
+        ===================================== */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("active");
+
+            }
+        );
+
+
+        /* CLOSE MENU AFTER CLICK */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        navLinks.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =====================================
+           DEPARTMENT MESSAGE
+        ===================================== */
+
+        function departmentInfo(name) {
+
+            alert(
+                "Department: " +
+                name +
+                "\n\n" +
+                "More information can be added " +
+                "to this section later."
+            );
+
+        }
+
+
+
+        /* =====================================
+           ADMISSION FORM
+        ===================================== */
+
+        const form =
+            document.getElementById(
+                "admissionForm"
+            );
+
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                    .getElementById("studentName")
+                    .value
+                    .trim();
+
+
+                const email =
+                    document
+                    .getElementById("studentEmail")
+                    .value
+                    .trim();
+
+
+                const phone =
+                    document
+                    .getElementById("phone")
+                    .value
+                    .trim();
+
+
+                const programme =
+                    document
+                    .getElementById("programme")
+                    .value;
+
+
+                if (name === "") {
+
+                    alert(
+                        "Please enter your name."
+                    );
+
+                    return;
+
+                }
+
+
+                if (email === "") {
+
+                    alert(
+                        "Please enter your email."
+                    );
+
+                    return;
+
+                }
+
+
+                if (phone.length < 10) {
+
+                    alert(
+                        "Please enter a valid phone number."
+                    );
+
+                    return;
+
+                }
+
+
+                if (programme === "") {
+
+                    alert(
+                        "Please select a programme."
+                    );
+
+                    return;
+
+                }
+
+
+                alert(
+                    "Admission Enquiry Submitted Successfully!\n\n" +
+
+                    "Name: " +
+                    name +
+
+                    "\nEmail: " +
+                    email +
+
+                    "\nPhone: " +
+                    phone +
+
+                    "\nProgramme: " +
+                    programme
+                );
+
+
+                form.reset();
+
+            }
+        );
+
+
+
+        /* =====================================
+           BACK TO TOP BUTTON
+        ===================================== */
+
+        const topBtn =
+            document.getElementById("topBtn");
+
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                if (window.scrollY > 400) {
+
+                    topBtn.style.display =
+                        "block";
+
+                } else {
+
+                    topBtn.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        function goTop() {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
